@@ -10,6 +10,66 @@
 
     <!-- <link rel="stylesheet" href="Bootstrap/css/bootstrap-utilities.css""> -->
     <link rel="stylesheet" href="Fontawesome/css/all.min.css"> 
+
+    <style>
+        /* Ensure dropdown menu appears on hover */
+        .navbar-nav .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Optional: Hide the dropdown menu by default */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%; /* Aligns dropdown below the parent */
+            left: 0;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+
+        /* Optional: Style for the dropdown menu */
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #2c3e50;  
+        }
+
+        /* for text animation of title */
+        .classic-smart-text-container {
+            text-align: left; /* or center if you want it centered */
+        }
+
+        .classic-smart-text {
+            font-size: 20px;
+            color: #2c3e50; /* Classic dark blue color */
+            letter-spacing: 1.5px; /* Slightly increased letter spacing for elegance */
+            text-transform: uppercase; /* Uppercase text for a strong, classic look */
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            cursor: pointer; /* Changes the cursor to pointer on hover */
+        }
+
+        .classic-smart-text::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #2c3e50; /* Same color as the text */
+            left: 50%;
+            bottom: 0;
+            transition: all 0.3s ease-out;
+            transform: translateX(-50%);
+        }
+
+        .classic-smart-text:hover::after {
+            width: 100%;
+        } 
+    </style>
 </head>
 <body class="body_css"> 
     <!---------------------------------------------------START - navigation bar and banner--------------------------------------------> 
@@ -46,15 +106,15 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <div class="dropdown-column">
-                                        <a class="dropdown-item" href="#">Health Screening</a>
-                                        <a class="dropdown-item" href="#">General Practice</a>
-                                        <a class="dropdown-item" href="#">Women's Health</a>
-                                        <a class="dropdown-item" href="#">Men's Health</a>
-                                        <a class="dropdown-item" href="#">Child & Adoloescent Health</a>
-                                        <a class="dropdown-item" href="#">Vaccination</a>
-                                        <a class="dropdown-item" href="#">Telemedicine</a>
-                                        <a class="dropdown-item" href="#">COVID-19</a>
-                                        <a class="dropdown-item" href="#">Targeted Medical</a>
+                                        <a class="dropdown-item" href="health-screening.html">Health Screening</a>
+                                        <a class="dropdown-item" href="general-practice.html">General Practice</a>
+                                        <a class="dropdown-item" href="women-health.html">Women's Health</a>
+                                        <a class="dropdown-item" href="men-health.html">Men's Health</a>
+                                        <a class="dropdown-item" href="child.html">Child & Adoloescent Health</a>
+                                        <a class="dropdown-item" href="vaccination.html">Vaccination</a>
+                                        <a class="dropdown-item" href="telemedicine.html">Telemedicine</a>
+                                        <a class="dropdown-item" href="covid19.html">COVID-19</a>
+                                        <a class="dropdown-item" href="targeted-medicine.html">Targeted Medical</a>
                                     </div> 
                                 </ul>
                             </li>
@@ -115,8 +175,8 @@
     <footer class="container-fluid text-white my-3" style="background-color: #2c3e50;">
         <div class="container py-5 text-white">
             <div class="row">
-                <h4 class="fw-bolder">About Vestata Medical Care</h4>
-                <p>By far the largest 24-hour clinic group in Singapore, we started off with 1 clinic in 1999 with the aims to provide a 24-hours medical service. 
+                <h4 class="fw-bolder">About Unity Health Clinic</h4>
+                <p class="fs-6">By far the largest 24-hour clinic group in Singapore, we started off with 1 clinic in 1999 with the aims to provide a 24-hours medical service. 
                     Today, our group boasts of 12 fully-equipped clinics nation wide. </p>
             </div>
             <hr class="ms-lg-2">
@@ -151,17 +211,17 @@
                     <span >OUR SERVICES</span> <br> 
                     <hr class="w-25">     
                     <a href="general-practice.html" class="d-block text-decoration-none text-secondary footer_a_hover">General Practice</a>
-                    <a href="about.html" class="d-block text-decoration-none text-secondary footer_a_hover">Vaccination COVID-19</a> 
-                    <a href="index.html" class="d-block text-decoration-none text-secondary footer_a_hover">Telemedicine</a>
+                    <a href="covid19.html" class="d-block text-decoration-none text-secondary footer_a_hover">Vaccination COVID-19</a> 
+                    <a href="telemedicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Telemedicine</a>
                     <a href="men-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Men's Health</a>  
                     <a href="women-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Women's Health</a>
                     <a href="health-screening.html" class="d-block text-decoration-none text-secondary footer_a_hover">Health Screening With Us</a>
-                    <a href="about.html" class="d-block text-decoration-none text-secondary footer_a_hover">Medical Aesthetic</a>  
+                    <a href="targeted-medicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Targeted Medicals</a>  
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <span >CORPORATE</span> <br> 
                     <hr class="w-25">     
-                    <a href="index.html" class="d-block text-decoration-none text-secondary footer_a_hover">Central Corporate Wellness</a><br> 
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Central Corporate Wellness</a><br> 
                     <span>CONTACT US</spanss=><br>  
                     <hr class="w-25">
                     <a href="booking.html" class="d-block text-decoration-none text-secondary footer_a_hover">Book an appointment</a>
