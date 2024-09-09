@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Health Clinic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css"> 
+    <!-- <link rel="stylesheet" href="Bootstrap/css/bootstrap-utilities.css""> -->
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css"> 
+
+    <style>
+        /* Ensure dropdown menu appears on hover */
+        .navbar-nav .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Optional: Hide the dropdown menu by default */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%; /* Aligns dropdown below the parent */
+            left: 0;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+
+        /* Optional: Style for the dropdown menu */
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #2c3e50;  
+        }
+
+        /* for text animation of title */
+        .classic-smart-text-container {
+            text-align: left; /* or center if you want it centered */
+        }
+
+        .classic-smart-text {
+            font-size: 20px;
+            color: #2c3e50; /* Classic dark blue color */
+            letter-spacing: 1.5px; /* Slightly increased letter spacing for elegance */
+            text-transform: uppercase; /* Uppercase text for a strong, classic look */
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            cursor: pointer; /* Changes the cursor to pointer on hover */
+        }
+
+        .classic-smart-text::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #2c3e50; /* Same color as the text */
+            left: 50%;
+            bottom: 0;
+            transition: all 0.3s ease-out;
+            transform: translateX(-50%);
+        }
+
+        .classic-smart-text:hover::after {
+            width: 100%;
+        } 
+    </style>
+</head>
+<body class="body_css"> 
+    <!---------------------------------------------------START - navigation bar and banner--------------------------------------------> 
+    <header style="width: 100%; height: 650px; background-image: url('images/homepage-img2.jpg'); background-size: cover; background-position: center;"> 
+        <div class="nav_div">
+            <nav class="navbar navbar-expand-lg nav rounded-pill w-100">
+                <div class="container-fluid mx-md-4 mx-lg-5">
+                    <a class="navbar-brand ms-lg-2" href="index.html">
+                        <img src="images/companylogo/logo.png" alt="" width="100%" height="80px"> 
+                    </a>
+                    <h1 class="home-title">Unity Health Clinic</h1> 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse  navbar-collapse" id="navbarNavDropdown"> 
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link mx-4 fs-5" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Group
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item" href="ourdoctors.html">Our Doctors</a>
+                                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                                    </div> 
+                                </ul>
+                            </li> 
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle mx-4 fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item" href="health-screening.html">Health Screening</a>
+                                        <a class="dropdown-item" href="general-practice.html">General Practice</a>
+                                        <a class="dropdown-item" href="women-health.html">Women's Health</a>
+                                        <a class="dropdown-item" href="men-health.html">Men's Health</a>
+                                        <a class="dropdown-item" href="child.html">Child & Adoloescent Health</a>
+                                        <a class="dropdown-item" href="vaccination.html">Vaccination</a>
+                                        <a class="dropdown-item" href="telemedicine.html">Telemedicine</a>
+                                        <a class="dropdown-item" href="covid19.html">COVID-19</a>
+                                        <a class="dropdown-item" href="targeted-medicine.html">Targeted Medical</a>
+                                    </div> 
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="contact.html">Contact</a>
+                            </li>  
+                        </ul> 
+                        <form class="justify-content-end">
+                            <span ><b>24-hour Service</b></span>
+                            <span class="d-block text-danger"><b>(+65-65892500)</b></span>
+                        </form> 
+                    </div> 
+                </div> 
+            </nav>  
+        </div> 
+        <div class="container text-left mt-md-5 mt-lg-5">
+            <p id="welcome" class="welcome">WELCOME TO UNITY HEALTH CLINIC</p>
+            <h3 id="wecare" class="wecare classic-smart-text shadow-text">We care about your health</h3>
+            <p id="onestop" class="onestop mt-lg-3">One-stop specialist clinic for the diagnosis & treatment for various health problems.</p>
+            <div class="mt-md-5 mt-lg-5"> 
+                <a href="booking.html" class="btn btn-lg booking-button btn-curtain" style="background-color: #2c3e50; color: white;">BOOK AN APPOINTMENT</a>
+                <a href="ourdoctors.html" class="btn btn-lg mx-lg-3 meetdoc-button btn-curtain" style="background-color: #2c3e50; color: white;">MEET OUR SPECIALISTS</a>
+            </div> 
+        </div>
+    </header> 
+    <!---------------------------------------------------END navigation bar and banner------------------------------------------------------>
+    <!---------------------------------------------------START Services--------------------------------------------------------------------->
+    <section>
+        <div class="container">
+            <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <h3 class="fade-in-scale-header text-uppercase text-center fw-bold my-3" style="color: #2c3e50; background-color: rgb(235, 235, 241);">UNITY HEALTH CLINIC SERVICES</h3>
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card clickable-card servicecard_hover">
+                                    <img src="images/services/child-adoloescent.jpg" class="card-img-top" alt="Child & Adolescent">
+                                    <div id="child-servicecard" class="card-body">
+                                        <h3 class="card-title">Child & Adolescent</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card clickable-card servicecard_hover">
+                                    <img src="images/services/targeted-medical.jpg" class="card-img-top" alt="General Practice">
+                                    <div id="targeted-servicecard" class="card-body">
+                                        <h3 class="card-title">General Practice</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card clickable-card servicecard_hover">
+                                    <img src="images/services/imc-vaccination.jpg" class="card-img-top" alt="Vaccination">
+                                    <div id="vaccination-servicecard" class="card-body">
+                                        <h3 class="card-title">Vaccination</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card clickable-card servicecard_hover">
+                                    <img src="images/services/Men-Health.jpg" class="card-img-top" alt="Men's Health">
+                                    <div id="men-health-servicecard" class="card-body">
+                                        <h3 class="card-title">Men's Health</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card clickable-card servicecard_hover">
+                                    <img src="images/services/International-Medical-Centre-Psychology-Team.jpg" class="card-img-top" alt="Women's Health">
+                                    <div id="women-health-servicecard" class="card-body">
+                                        <h3 class="card-title">Women's Health</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card clickable-card servicecard_hover">
+                                    <img src="images/services/health-screening.jpg" class="card-img-top" alt="Health Screening">
+                                    <div id="healthscreening-servicecard" class="card-body">
+                                        <h3 class="card-title">Health Screening</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Additional slides as needed -->
+                </div>
+    
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    
+        <!-- See All Services Button --> 
+        <div class="text-center">
+            <a href="allservices.html" class="btn btn-sm btn-curtain fs-5 mx-2 my-2" style="background-color:#2980b9; color:white;">See All Services</a> 
+        </div>
+    </section>
+    
+    <!---------------------------------------------------END Services----------------------------------------------------------------------->
+    <!---------------------------------------------------Star Separator--------------------------------------------------------------------->
+     
+    <section style="background-color: #2c3e50; color: white;">
+        <div class="container my-3">
+            <div class="text-center">
+                <h2 style="font-family: 'Georgia', serif;">Our team speaks multiple languages to help you feel at home.</h2>
+            </div>
+            <div class="text-center my-md-2">
+                <a href="contact.html" class="btn btn-sm btn-curtain fs-5 mx-2 my-2" style="background-color:#2980b9; color:white;">Contact Us</a>
+                <a href="booking.html" class="btn btn-sm btn-curtain fs-5 mx-2" style="background-color:goldenrod; color:white;">Book Online</a>
+            </div>
+        </div>
+    </section> 
+    
+    <!---------------------------------------------------END Separator---------------------------------------------------------------------->    
+    <!---------------------------------------------------START Doctors---------------------------------------------------------------------->
+    <section class="my-3">
+        <div class="container">
+            <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <h2 class="text-center fw-bold mt-5">Meet Our Doctors</h2>
+                <p class="text-center mt-3 fs-5">Our carefully selected Doctors come from across the world and are committed to whole patient care. 
+                    Our team represents years of collective experience, expertise, and the very best in doctor-patient interaction and commitment.</p>
+                
+                    <div class="carousel-inner">
+    
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 border border-0">
+                                    <div class="card border border-0">
+                                        <img src="images/doctors/Dr-Ho-Tzin-Yih.jpg" class="card-img-top " alt="Image 1">
+                                        <h5 class="card-title text-center my-3 fw-semibold">Dr. Haythar Queen</h5>
+                                        <p class="card-title text-center fs-6">Speaks English</p>  
+                                        <a href="dr-ho-tzin.html" class="btn btn-md rounded-pill ms-3 fs-5"  style="background-color: #2c3e50;color: white;">Meet & Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border border-0">
+                                        <img src="images/doctors/Dr-Jessica.png" class="card-img-top " alt="Image 1">
+                                        <h5 class="card-title text-center my-3 fw-semibold">Dr. Jessica Chan</h5>
+                                        <p class="card-title text-center fs-6">Speaks English & Japanese</p>  
+                                        <a href="dr-jessica.html" class="btn btn-md rounded-pill fs-5" style="background-color: #2c3e50;color: white;">Meet & Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border border-0">
+                                        <img src="images/doctors/Dr-Kym-Chew.jpg" class="card-img-top " alt="Image 1">
+                                        <h5 class="card-title text-center my-3 fw-semibold">Dr. Chew Khun</h5>
+                                        <p class="card-title text-center fs-6">Speaks English</p> 
+                                        <a href="dr-kym-chew.html" class="btn btn-md rounded-pill fs-5" style="background-color: #2c3e50;color: white;">Meet & Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card border border-0">
+                                        <img src="images/doctors/Dr-Megha-Jasm.jpg" class="card-img-top " alt="Image 1">
+                                        <h5 class="card-title text-center my-3 fw-semibold">Dr. Megha Jas</h5>
+                                        <p class="card-title text-center fs-6">Speaks English</p> 
+                                     
+                                        <a href="dr-megha-jas.html" class="btn btn-md rounded-pill fs-5" style="background-color: #2c3e50;color: white;">Meet & Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border border-0">
+                                        <img src="images/doctors/Huang-Yixi.png" class="card-img-top " alt="Image 1">
+                                        <h5 class="card-title text-center my-3 fw-semibold">Dr. Huang YiXi</h5>
+                                        <p class="card-title text-center fs-6">Speaks English</p> 
+                                        
+                                        <a href="dr-huang-yixi.html" class="btn btn-md rounded-pill fs-5" style="background-color: #2c3e50;color: white;">Meet & Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border border-0">
+                                        <img src="images/doctors/Dr-Vinu-Sahlen.jpg" class="card-img-top " alt="Image 1">
+                                        <h5 class="card-title text-center my-3 fw-semibold">Dr. Vinu Sahlen</h5>
+                                        <p class="card-title text-center fs-6">Speaks English & Temil</p> 
+                                       
+                                        <a href="dr-vinu.html" class="btn btn-md rounded-pill fs-5" style="background-color: #2c3e50;color: white;">Meet & Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+
+                <!-- Controls -->
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
+    
+                <!-- Indicators -->
+                <!-- <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------END Doctors------------------------------------------------------------------------>
+    <!---------------------------------------------------Star Separator--------------------------------------------------------------------->
+    
+    <section style="background-color: #2c3e50; color: white;">
+        <div class="container my-3">
+            <div class="text-center"> 
+                <h2 style="font-family: 'Georgia', serif;">Your Family, Our Priority</h2>
+            </div>
+            <div class="text-center my-md-2">
+                <a href="contact.html" class="btn btn-sm btn-curtain fs-5 mx-2 my-2" style="background-color:#2980b9; color:white;">Contact Us</a>
+                <a href="booking.html" class="btn btn-sm btn-curtain fs-5 mx-2" style="background-color:goldenrod; color:white;">Book Online</a>
+            </div>
+        </div>
+    </section> 
+    <!---------------------------------------------------END Separator---------------------------------------------------------------------->
+    <!---------------------------------------------------START Review---------------------------------------------------------------------->
+    <section>
+        <div class="container ">
+            <h2 class="text-center fw-bold my-3">What Our Patients Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border border-0">
+                        <!-- <img src="images/doctor2.jpg" alt="Customer Photo" class="customer-photo mx-auto mb-3"> -->
+                        <h5 class="card-title my-3 mx-3"><b>Jason Lee</b></h5>
+                        <p class="card-text mx-3 text-muted">"Thank you for providing timely consultation late at night for our 2 yr old, 
+                            suffering from vomiting, diarrhoea and sleepiness. The registration and consultation was 
+                            attentive and quick. As such, she was able to get her vomiting under control and also enough 
+                            rest for the night. Thanks again to the team for our good experience.”</p>
+                        <div class="star-rating mb-2 ms-3">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-muted ms-3">5 out of 5 stars</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border border-0">
+                        <!-- <img src="images/doctor2.jpg" alt="Customer Photo" class="customer-photo mx-auto mb-3"> -->
+                        <h5 class="card-title my-3 mx-3"><b>Jaime Jailani</b></h5>
+                        <p class="card-text mx-3 text-muted">"Even though the clinic is always busy at certain times, the medical assistants 
+                            are fast, efficient and friendly. The medicines are effective and not as costly as other clinics 
+                            I have been to. The doctor is friendly and professional.”</p>
+                        <div class="star-rating mb-2 ms-3">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-muted ms-3">5 out of 5 stars</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border border-0">
+                        <!-- <img src="images/doctor2.jpg" alt="Customer Photo" class="customer-photo mx-auto mb-3"> -->
+                        <h5 class="card-title my-3 mx-3 fw-bolder">Naveen Raj</h5>
+                        <p class="card-text mx-3 text-muted">“Came here during lunch time on a work day to get medication and medical consultation. Doctor is friendly and caring. 
+                            Consultation time was fast, clinic within walking distance from MRT.”</p>
+                        <div class="star-rating mb-2 ms-3">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-muted ms-3">5 out of 5 stars</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!---------------------------------------------------END Review---------------------------------------------------------------------->
+    <!---------------------------------------------------------------------- start footer --------------------------------------------------->
+    <footer class="container-fluid text-white my-3" style="background-color: #2c3e50;">
+        <div class="container py-5 text-white">
+            <div class="row">
+                <h4 class="fw-bolder">About Unity Health Clinic</h4>
+                <p class="fs-6">By far the largest 24-hour clinic group in Singapore, we started off with 1 clinic in 1999 with the aims to provide a 24-hours medical service. 
+                    Today, our group boasts of 12 fully-equipped clinics nation wide. </p>
+            </div>
+            <hr class="ms-lg-2">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span>GET IN TOUCH</span> <br>   
+                    <hr class="w-25">                     
+                    <span class="opacity-50">WHATSAPP</span><br>
+                    <span>(+65)8856936</span><br> <br>   
+                    <span class="opacity-50">EMAIL</span><br>
+                    <span>enquiries@unityhealthcare.com</span><br> <br>   
+                    <span class="opacity-50">BUSINESS HOURS</span><br>
+                    <span>Open 24 hours, Mon to Sun</span><br>
+                    <p>
+                        <i class="fa-brands fa-square-facebook fa-3x"></i>
+                        <i class="fa-brands fa-square-github fa-3x mx-2"></i>
+                        <i class="fa-brands fa-linkedin fa-3x mx-2"></i>
+                        <i class="fa-brands fa-square-instagram  fa-3x mx-2"></i>
+                    </p> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR GROUP</span> <br>  
+                    <hr class="w-25"> 
+                    <a href="ourdoctors.html" class="d-block text-decoration-none text-secondary footer_a_hover">Our Doctors</a>
+                    <a href="aboutus.html" class="d-block text-decoration-none text-secondary footer_a_hover">About Us</a> 
+                    <br><br>
+                    <span>LOCATE US</span><br>
+                    <hr class="w-25"> 
+                    <span class="opacity-50"> 24-hour clinic</span> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR SERVICES</span> <br> 
+                    <hr class="w-25">     
+                    <a href="general-practice.html" class="d-block text-decoration-none text-secondary footer_a_hover">General Practice</a>
+                    <a href="covid19.html" class="d-block text-decoration-none text-secondary footer_a_hover">Vaccination COVID-19</a> 
+                    <a href="telemedicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Telemedicine</a>
+                    <a href="men-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Men's Health</a>  
+                    <a href="women-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Women's Health</a>
+                    <a href="health-screening.html" class="d-block text-decoration-none text-secondary footer_a_hover">Health Screening With Us</a>
+                    <a href="targeted-medicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Targeted Medicals</a>  
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >CORPORATE</span> <br> 
+                    <hr class="w-25">     
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Central Corporate Wellness</a><br> 
+                    <span>CONTACT US</spanss=><br>  
+                    <hr class="w-25">
+                    <a href="booking.html" class="d-block text-decoration-none text-secondary footer_a_hover">Book an appointment</a>
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Enquiries and Feedback</a> 
+                </div> 
+            </div>
+        </div> 
+    </footer>
+     
+    <script src="plugin/jquery-2.2.0.min.js"></script> <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+    <script src="plugin/slick.js"></script> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> -->
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Fontawesome/js/all.min.js"></script>
+    <script src="splide/js/splide.min.js"></script>
+    
+    <script>
+        document.getElementById('men-health-servicecard').addEventListener('click', function() {
+            window.location.href = 'men-health.html';  
+        });
+
+        document.getElementById('women-health-servicecard').addEventListener('click', function() {
+            window.location.href = 'women-health.html';  
+        });
+
+        document.getElementById('healthscreening-servicecard').addEventListener('click', function() {
+            window.location.href = 'health-screening.html';  
+        });
+
+        document.getElementById('vaccination-servicecard').addEventListener('click', function() {
+            window.location.href = 'vaccination.html';  
+        });
+
+        document.getElementById('child-servicecard').addEventListener('click', function() {
+            window.location.href = 'child.html';  
+        });
+
+        document.getElementById('targeted-servicecard').addEventListener('click', function() {
+            window.location.href = 'general-practice.html';  
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Screening Service</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">  
+    <!-- <link rel="stylesheet" href="css/bootstrap.min-maxchn.css">   -->
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css"> 
+    
+    <style>
+        /* Ensure dropdown menu appears on hover */
+        .navbar-nav .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Optional: Hide the dropdown menu by default */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%; /* Aligns dropdown below the parent */
+            left: 0;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+
+        /* Optional: Style for the dropdown menu */
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #2c3e50;  
+        }
+
+        /* for text animation of title */
+        .classic-smart-text-container {
+            text-align: left; /* or center if you want it centered */
+        }
+
+        .classic-smart-text {
+            font-size: 20px;
+            color: #2c3e50; /* Classic dark blue color */
+            letter-spacing: 1.5px; /* Slightly increased letter spacing for elegance */
+            text-transform: uppercase; /* Uppercase text for a strong, classic look */
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            cursor: pointer; /* Changes the cursor to pointer on hover */
+        }
+
+        .classic-smart-text::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #2c3e50; /* Same color as the text */
+            left: 50%;
+            bottom: 0;
+            transition: all 0.3s ease-out;
+            transform: translateX(-50%);
+        }
+
+        .classic-smart-text:hover::after {
+            width: 100%;
+        } 
+    </style>
+</head>
+<body class="body_css"> 
+    <!---------------------------------------------------START - navigation bar and banner--------------------------------------------> 
+    <header> 
+        <div class="nav_div">
+            <nav class="navbar navbar-expand-lg nav rounded-pill w-100">
+                <div class="container-fluid mx-md-4 mx-lg-5">
+                    <a class="navbar-brand ms-lg-2" href="index.html">
+                        <img src="images/companylogo/logo.png" alt="" width="100%" height="80px"> 
+                    </a>
+                    <h1 class="home-title">Unity Health Clinic</h1> 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse  navbar-collapse" id="navbarNavDropdown"> 
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link mx-4" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Group
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item" href="ourdoctors.html">Our Doctors</a>
+                                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                                    </div> 
+                                </ul>
+                            </li> 
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item" href="health-screening.html">Health Screening</a>
+                                        <a class="dropdown-item" href="general-practice.html">General Practice</a>
+                                        <a class="dropdown-item" href="women-health.html">Women's Health</a>
+                                        <a class="dropdown-item" href="men-health.html">Men's Health</a>
+                                        <a class="dropdown-item" href="child.html">Child & Adoloescent Health</a>
+                                        <a class="dropdown-item" href="vaccination.html">Vaccination</a>
+                                        <a class="dropdown-item" href="telemedicine.html">Telemedicine</a>
+                                        <a class="dropdown-item" href="covid19.html">COVID-19</a>
+                                        <a class="dropdown-item" href="targeted-medicine.html">Targeted Medical</a>
+                                    </div> 
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="contact.html">Contact</a>
+                            </li>  
+                        </ul> 
+                        <form class="justify-content-end">
+                            <span ><b>24-hour Service</b></span>
+                            <span class="d-block text-danger"><b>(+65-65892500)</b></span>
+                        </form> 
+                    </div> 
+                </div> 
+            </nav>  
+        </div> 
+    </header> 
+    <!---------------------------------------------------END navigation bar and banner------------------------------------------------------>
+     <!--------------------------------------------------------------START Header-------------------------------------------------------->
+    
+    <section class="mt-md-4 mt-lg-2" style="overflow: hidden;">
+        <div class="container mt-3 margin_left"> 
+            <h2 class="text-start meetourdoc_h1 animated-header my-2" style="font-size: 24px;">Health Screening</h2> 
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border border-1">
+                        <img src="images/others/otherimage-3.jpg" class="card-img-top " alt="Image 1"> 
+                    </div>
+                </div>
+                <div class="col-md-8">  
+                    <p style="font-size: 18px;">
+                        Welcome to the Unity Health Care (UHC), Singapore’s premier destination for personalized and tailored health screenings. 
+                            At UHC, we believe in the power of preventative health care and the importance of identifying health risks early. 
+                            Our approach to health screening is bespoke, focusing on you and your unique health needs without the clutter of unnecessary tests.
+                            <br><br>
+                            Health screening is offered in practically all public and private hospitals as well as private clinics in Singapore, ranging from basic or general screening packages to full-on comprehensive or executive screening packages. Polyclinics in Singapore offer health screenings as well, albeit only for specific diseases, such as diabetes, high blood pressure, and high blood cholesterol.
+                    </p>
+                    <a href="booking.html" class="btn btn-lg btn-meetdoc fs-5 mt-0 rounded-pill w-1000" style="background-color: #2980b9; color: white;">Begin Health Screening</a>
+                </div>
+            </div>  
+        </div> 
+    </section>
+    
+    <!--------------------------------------------------------------END Header-------------------------------------------------------->
+      
+    <!---------------------------------------------------START service detail---------------------------------------------------------------->    
+    
+    <section class="container mt-5" style="background-color: #2c3e50; color: white;">
+        <div class="container my-3">
+            <div class="text-center">  
+                <h2 style="font-family: 'Georgia', serif; font-size: 34px;">Why Choose UHC for your Health Screening</h2> 
+            </div>
+        </div>
+    </section> 
+    
+    <section class="my-3">  
+        <div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)"> 
+                        <div class="icon-label">
+                            <i class="fas fa-shield-alt mx-2"></i>
+                            <span>Trust</span>
+                        </div> 
+                    </div>
+                    <div class="accordion-body">
+                        <p style="color:#2c3e50;font-size: 18px;">
+                            <span class="fs-5" style="color:#2c3e50;"><b>Trusted Expertise:</b> </span>
+                            IHC has been a pillar of reliable service in Singapore for over 20 years, earning a reputation for 
+                            dependable, evidence-based medical advice. Our team, rich in experience, dedicates itself to your health and well-being, 
+                            ensuring that every piece of advice and service we offer is rooted in trust and professional integrity.
+                           
+                        </p> 
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="icon-label ">
+                            <i class="fas fa-cogs mx-2"></i>
+                            <span>Bespoke</span>
+                        </div> 
+                    </div>
+                    <div class="accordion-body">
+                        <p style="color:#2c3e50;font-size: 18px;">
+                            <span class="fs-5" style="color:#2c3e50;"><b>Tailored to You:</b> </span>
+                            At UHC, we understand that health is personal. That’s why our health screenings are custom-made for 
+                            your unique health profile, taking into account factors such as gender, age, health history, and family background. 
+                            This personalised approach guarantees that every test and conversation is specifically relevant to you, making your
+                            health journey as individual as you are. <br> <br>
+                            <span class="fs-5" style="color:#2c3e50;"><b>Evidence-Based Practice: </b> </span>
+                            We reject the generic, one-size-fits-all health packages filled with superfluous tests. Instead, our approach is 
+                            firmly anchored in evidence-based medicine. This ensures you receive a thorough health assessment that’s not only 
+                            relevant but also effective and efficient, crafted just for you.
+                        </p> 
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)"> 
+                        <div class="icon-label">
+                            <i class="fas fa-dollar-sign mx-2"></i>
+                            <span>Cost</span>
+                        </div> 
+                    </div>
+                    <div class="accordion-body">
+                        <p style="color:#2c3e50;font-size: 18px;">
+                            <span class="fs-5" style="color:#2c3e50;"><b>Cost-Effective:</b> </span>
+                            Choosing UHC for your health screening is more than just a health decision; it’s a smart financial choice too. 
+                            Our bespoke health screenings come at competitive prices, offering you exceptional value. This means you can invest 
+                            in your health without sacrificing quality, ensuring a future where you’re not just healthier but also financially 
+                            wiser. <br> <br>
+                            <span class="fs-5" style="color:#2c3e50;"><b>Convenience and Care: </b> </span>
+                            Booking your health screening with us is easy and convenient, thanks to our online booking system. Our clinics are 
+                            spread across Singapore, including specialised facilities for children’s health, making superior healthcare accessible 
+                            to you and your loved ones. This accessibility is part of our commitment to not only providing quality care but also 
+                            making sure it’s available without unnecessary expense or hassle.
+                        </p> 
+                    </div>
+                </div>
+                <div class="my-4" style="align-items: center;display: flex;flex-direction: column;justify-content: center;">
+                    <a href="booking.html" class="btn btn-lg btn-meetdoc rounded-pill fs-5" style="background-color: #2980b9; color: white; width: 50%;">Book Online</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!----------------------------------------------------END Service detail-----------------------------------------------------------------> 
+    <!--------------------------------------------------  start footer --------------------------------------------------->
+    <footer class="container-fluid text-white my-3" style="background-color: #2c3e50;">
+        <div class="container py-5 text-white">
+            <div class="row">
+                <h4 class="fw-bolder">About Unity Health Clinic</h4>
+                <p class="fs-6">By far the largest 24-hour clinic group in Singapore, we started off with 1 clinic in 1999 with the aims to provide a 24-hours medical service. 
+                    Today, our group boasts of 12 fully-equipped clinics nation wide. </p>
+            </div>
+            <hr class="ms-lg-2">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span>GET IN TOUCH</span> <br>   
+                    <hr class="w-25">                     
+                    <span class="opacity-50">WHATSAPP</span><br>
+                    <span>(+65)8856936</span><br> <br>   
+                    <span class="opacity-50">EMAIL</span><br>
+                    <span>enquiries@unityhealthcare.com</span><br> <br>   
+                    <span class="opacity-50">BUSINESS HOURS</span><br>
+                    <span>Open 24 hours, Mon to Sun</span><br>
+                    <p>
+                        <i class="fa-brands fa-square-facebook fa-3x"></i>
+                        <i class="fa-brands fa-square-github fa-3x mx-2"></i>
+                        <i class="fa-brands fa-linkedin fa-3x mx-2"></i>
+                        <i class="fa-brands fa-square-instagram  fa-3x mx-2"></i>
+                    </p> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR GROUP</span> <br>  
+                    <hr class="w-25"> 
+                    <a href="ourdoctors.html" class="d-block text-decoration-none text-secondary footer_a_hover">Our Doctors</a>
+                    <a href="aboutus.html" class="d-block text-decoration-none text-secondary footer_a_hover">About Us</a> 
+                    <br><br>
+                    <span>LOCATE US</span><br>
+                    <hr class="w-25"> 
+                    <span class="opacity-50"> 24-hour clinic</span> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR SERVICES</span> <br> 
+                    <hr class="w-25">     
+                    <a href="general-practice.html" class="d-block text-decoration-none text-secondary footer_a_hover">General Practice</a>
+                    <a href="covid19.html" class="d-block text-decoration-none text-secondary footer_a_hover">Vaccination COVID-19</a> 
+                    <a href="telemedicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Telemedicine</a>
+                    <a href="men-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Men's Health</a>  
+                    <a href="women-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Women's Health</a>
+                    <a href="health-screening.html" class="d-block text-decoration-none text-secondary footer_a_hover">Health Screening With Us</a>
+                    <a href="targeted-medicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Targeted Medicals</a>  
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >CORPORATE</span> <br> 
+                    <hr class="w-25">     
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Central Corporate Wellness</a><br> 
+                    <span>CONTACT US</spanss=><br>  
+                    <hr class="w-25">
+                    <a href="booking.html" class="d-block text-decoration-none text-secondary footer_a_hover">Book an appointment</a>
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Enquiries and Feedback</a> 
+                </div> 
+            </div>
+        </div> 
+    </footer>
+     
+    <script src="plugin/jquery-2.2.0.min.js"></script> <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+    <script src="plugin/slick.js"></script> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> -->
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Fontawesome/js/all.min.js"></script>
+    <script src="splide/js/splide.min.js"></script>
+    
+    <script>
+        function toggleAccordion(header) {
+            const body = header.nextElementSibling;
+            const isActive = header.classList.contains('active');
+            
+            // Close all open accordions
+            document.querySelectorAll('.accordion-header').forEach(item => {
+                item.classList.remove('active');
+                item.nextElementSibling.classList.remove('show');
+            });
+    
+            // Toggle the clicked accordion
+            if (!isActive) {
+                header.classList.add('active');
+                body.classList.add('show');
+            }
+        }
+        // Optional: Automatically open the first item on page load
+    document.querySelector('.accordion-item .accordion-body').classList.add('show');
+    </script>
+</body>
+</html>
