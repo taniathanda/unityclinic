@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css"> 
+
+    <style>
+        /* Ensure dropdown menu appears on hover */
+        .navbar-nav .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Optional: Hide the dropdown menu by default */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%; /* Aligns dropdown below the parent */
+            left: 0;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+
+        /* Optional: Style for the dropdown menu */
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #2c3e50;  
+        }
+
+        /* for text animation of title */
+        .classic-smart-text-container {
+            text-align: left; /* or center if you want it centered */
+        }
+
+        .classic-smart-text {
+            font-size: 20px;
+            color: #2c3e50; /* Classic dark blue color */
+            letter-spacing: 1.5px; /* Slightly increased letter spacing for elegance */
+            text-transform: uppercase; /* Uppercase text for a strong, classic look */
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            cursor: pointer; /* Changes the cursor to pointer on hover */
+        }
+
+        .classic-smart-text::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #2c3e50; /* Same color as the text */
+            left: 50%;
+            bottom: 0;
+            transition: all 0.3s ease-out;
+            transform: translateX(-50%);
+        }
+
+        .classic-smart-text:hover::after {
+            width: 100%;
+        } 
+ 
+    </style>
+</head>
+<body class="body_css">  
+   
+    <!---------------------------------------------------------------------START navigation--------------------------------------------------->
+    <header> 
+        <!-- <img src="images/homepage-img2.jpg" class="w-100 h-20" alt="..."> -->
+        <div class="nav_div">
+            <nav class="navbar navbar-expand-lg nav rounded-pill w-100">
+                <div class="container-fluid mx-md-4 mx-lg-5">
+                    <a class="navbar-brand ms-lg-2" href="index.html">
+                        <img src="images/companylogo/logo.png" alt="" width="100%" height="80px"> 
+                    </a>
+                    <h1 class="home-title">Unity Health Clinic</h1> 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse  navbar-collapse" id="navbarNavDropdown"> 
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link mx-4" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Group
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item" href="ourdoctors.html">Our Doctors</a>
+                                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                                    </div> 
+                                </ul>
+                            </li> 
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item" href="health-screening.html">Health Screening</a>
+                                        <a class="dropdown-item" href="general-practice.html">General Practice</a>
+                                        <a class="dropdown-item" href="women-health.html">Women's Health</a>
+                                        <a class="dropdown-item" href="men-health.html">Men's Health</a>
+                                        <a class="dropdown-item" href="child.html">Child & Adoloescent Health</a>
+                                        <a class="dropdown-item" href="vaccination.html">Vaccination</a>
+                                        <a class="dropdown-item" href="telemedicine.html">Telemedicine</a>
+                                        <a class="dropdown-item" href="covid19.html">COVID-19</a>
+                                        <a class="dropdown-item" href="targeted-medicine.html">Targeted Medical</a>
+                                    </div> 
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="contact.html">Contact</a>
+                            </li>  
+                        </ul> 
+                        <form class="justify-content-end">
+                            <span ><b>24-hour Service</b></span>
+                            <span class="d-block text-danger"><b>(+65-65892500)</b></span>
+                        </form> 
+                    </div> 
+                </div> 
+            </nav>  
+        </div> 
+    </header> 
+    <!--------------------------------------------------------------END navigation-------------------------------------------------------->
+    <!----------------------------------------------------------Start See All Service------------------------------------------------->        
+     
+    <section> 
+        <div class="meetourdoc_div"></div> 
+            <div class="container "> 
+                <h2 class="text-start meetourdoc_h1 animated-header my-2" style="font-size: 24px;">See Our Services</h2>  
+                <div class="container my-3">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <div class="card border border-1">
+                                <img src="images/square-img1.jpg" class="w-100 h-100 rounded-4" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="fw-light" style="font-size: 17px;">
+                                Our doctors are internationally trained GPs, Family Physicians and Paediatricians that provide medical care for the whole family. Our doctors offer all aspects of acute and chronic primary health care. We also have various minor surgical procedures and in-clinic treatments available at our clinics. In addition, 
+                                we have dedicated treatment rooms that are fully equipped. 
+                                <br><br>
+                                Our Registered Nurses and support staff are trained to provide an array of services to meet your healthcare needs.
+                                <br><br>
+                                Services include: 
+                                <br><br>
+                                • Blood taking and specimen collection for pathology tests.
+                                <br>
+                                • Dispensing of medication – we stock a comprehensive range of medications and vaccines for convenience.
+                                <br>
+                                • Administration of infusions and other in-clinic procedures.
+                                <br>
+                                • Coordinating imaging services and specialist appointments.
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div> 
+    </section>
+    
+    <!----------------------------------------------------------End See All Service---------------------------------------------------> 
+     <!---------------------------------------------------Star Separator--------------------------------------------------------------------->
+    
+     <section style="background-color: #2c3e50; color: white;">
+        <div class="container">
+            <div class="text-center">
+                <h1>Your Family, Our Priority</h1>
+            </div>
+            <div class="text-center my-md-2">
+                <a href="contact.html" class="btn btn-sm btn-curtain fs-5 mx-2 my-2" style="background-color:#2980b9; color:white;">Contact Us</a>
+                <a href="booking.html" class="btn btn-sm btn-curtain fs-5 mx-2" style="background-color:goldenrod; color:white;">Book Online</a>
+            </div>
+        </div>
+    </section> 
+    <!---------------------------------------------------END Separator---------------------------------------------------------------------->
+    <!-----------------------------------------------Start Section Details------------------------------------------------>
+    
+    <section> 
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/services/child-adoloescent.jpg" class="card-img-top" alt="Child & Adolescent">
+                        <div id="child-servicecard" class="card-body">
+                            <h3 class="card-title">Child & Adolescent</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/square-img4.jpg" class="card-img-top" alt="General Practice">
+                        <div id="generalpractice-servicecard" class="card-body">
+                            <h3 class="card-title">General Practice</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/services/imc-vaccination.jpg" class="card-img-top" alt="Vaccination">
+                        <div id="vaccination-servicecard" class="card-body">
+                            <h3 class="card-title">Vaccination</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/services/Men-Health.jpg" class="card-img-top" alt="Men's Health">
+                        <div id="men-health-servicecard" class="card-body">
+                            <h3 class="card-title">Men's Health</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/services/International-Medical-Centre-Psychology-Team.jpg" class="card-img-top" alt="Women's Health">
+                        <div id="women-health-servicecard" class="card-body">
+                            <h3 class="card-title">Women's Health</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/services/health-screening.jpg" class="card-img-top" alt="Health Screening">
+                        <div id="healthscreening-servicecard" class="card-body">
+                            <h3 class="card-title">Health Screening</h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+           
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/services/imc-telemedicine.jpg" class="card-img-top" alt="Telemedicine">
+                        <div id="telemedicine-servicecard" class="card-body">
+                            <h3 class="card-title">Telemedicine</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/services/imc-vaccination-covid19.jpg" class="card-img-top" alt="COVID19">
+                        <div id="COVID19-servicecard" class="card-body">
+                            <h3 class="card-title">COVID-19</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card clickable-card servicecard_hover">
+                        <img src="images/services/targeted-medical.jpg" class="card-img-top" alt="Target Medicals">
+                        <div id="targeted-servicecard" class="card-body">
+                            <h3 class="card-title">Target Medicals</h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </section>
+    <!-----------------------------------------------End Section Details-------------------------------------------------->
+   
+    <!---------------------------------------------------------------------- start footer --------------------------------------------------->
+    <footer class="container-fluid text-white " style="background-color: #2c3e50;">
+        <div class="container py-5 text-white">
+            <div class="row">
+                <h4 class="fw-bolder">About Unity Health Clinic</h4>
+                <p class="fs-6">By far the largest 24-hour clinic group in Singapore, we started off with 1 clinic in 1999 with the aims to provide a 24-hours medical service. 
+                    Today, our group boasts of 12 fully-equipped clinics nation wide. </p>
+            </div>
+            <hr class="ms-lg-2">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span>GET IN TOUCH</span> <br>   
+                    <hr class="w-25">                     
+                    <span class="opacity-50">WHATSAPP</span><br>
+                    <span>(+65)8856936</span><br> <br>   
+                    <span class="opacity-50">EMAIL</span><br>
+                    <span>enquiries@unityhealthcare.com</span><br> <br>   
+                    <span class="opacity-50">BUSINESS HOURS</span><br>
+                    <span>Open 24 hours, Mon to Sun</span><br>
+                    <p>
+                        <i class="fa-brands fa-square-facebook fa-3x"></i>
+                        <i class="fa-brands fa-square-github fa-3x mx-2"></i>
+                        <i class="fa-brands fa-linkedin fa-3x mx-2"></i>
+                        <i class="fa-brands fa-square-instagram  fa-3x mx-2"></i>
+                    </p> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR GROUP</span> <br>  
+                    <hr class="w-25"> 
+                    <a href="ourdoctors.html" class="d-block text-decoration-none text-secondary footer_a_hover">Our Doctors</a>
+                    <a href="aboutus.html" class="d-block text-decoration-none text-secondary footer_a_hover">About Us</a> 
+                    <br><br>
+                    <span>LOCATE US</span><br>
+                    <hr class="w-25"> 
+                    <span class="opacity-50"> 24-hour clinic</span> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR SERVICES</span> <br> 
+                    <hr class="w-25">     
+                    <a href="general-practice.html" class="d-block text-decoration-none text-secondary footer_a_hover">General Practice</a>
+                    <a href="covid19.html" class="d-block text-decoration-none text-secondary footer_a_hover">Vaccination COVID-19</a> 
+                    <a href="telemedicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Telemedicine</a>
+                    <a href="men-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Men's Health</a>  
+                    <a href="women-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Women's Health</a>
+                    <a href="health-screening.html" class="d-block text-decoration-none text-secondary footer_a_hover">Health Screening With Us</a>
+                    <a href="targeted-medicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Targeted Medicals</a>  
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >CORPORATE</span> <br> 
+                    <hr class="w-25">     
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Central Corporate Wellness</a><br> 
+                    <span>CONTACT US</spanss=><br>  
+                    <hr class="w-25">
+                    <a href="booking.html" class="d-block text-decoration-none text-secondary footer_a_hover">Book an appointment</a>
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Enquiries and Feedback</a> 
+                </div> 
+            </div>
+        </div> 
+    </footer>
+     
+
+    <script src="plugin/jquery-2.2.0.min.js"></script> <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+    <script src="plugin/slick.js"></script> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> -->
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Fontawesome/js/all.min.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> --> 
+    <script>
+        document.getElementById('men-health-servicecard').addEventListener('click', function() {
+            window.location.href = 'men-health.html';  
+        });
+
+        document.getElementById('women-health-servicecard').addEventListener('click', function() {
+            window.location.href = 'women-health.html';  
+        });
+
+        document.getElementById('healthscreening-servicecard').addEventListener('click', function() {
+            window.location.href = 'health-screening.html';  
+        });
+
+        document.getElementById('vaccination-servicecard').addEventListener('click', function() {
+            window.location.href = 'vaccination.html';  
+        });
+
+        document.getElementById('COVID19-servicecard').addEventListener('click', function() {
+            window.location.href = 'covid19.html';  
+        });
+
+        document.getElementById('child-servicecard').addEventListener('click', function() {
+            window.location.href = 'child.html';  
+        });
+
+        document.getElementById('targeted-servicecard').addEventListener('click', function() {
+            window.location.href = 'targeted-medicine.html';  
+        });
+
+        document.getElementById('generalpractice-servicecard').addEventListener('click', function() {
+            window.location.href = 'general-practice.html';  
+        });
+
+        document.getElementById('telemedicine-servicecard').addEventListener('click', function() {
+            window.location.href = 'telemedicine.html';  
+        });
+    </script>
+</body>
+</html>

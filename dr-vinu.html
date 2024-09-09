@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Vinu Sahlen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css"> 
+    <!-- <link rel="stylesheet" href="Bootstrap/css/bootstrap-utilities.css""> -->
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css">  
+
+    <style>
+        /* Ensure dropdown menu appears on hover */
+        .navbar-nav .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Optional: Hide the dropdown menu by default */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%; /* Aligns dropdown below the parent */
+            left: 0;
+            z-index: 1000; /* Ensures it appears above other elements */
+        }
+
+        /* Optional: Style for the dropdown menu */
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #2c3e50;  
+        }
+
+        /* for text animation of title */
+        .classic-smart-text-container {
+            text-align: left; /* or center if you want it centered */
+        }
+
+        .classic-smart-text {
+            font-size: 20px;
+            color: #2c3e50; /* Classic dark blue color */
+            letter-spacing: 1.5px; /* Slightly increased letter spacing for elegance */
+            text-transform: uppercase; /* Uppercase text for a strong, classic look */
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            cursor: pointer; /* Changes the cursor to pointer on hover */
+        }
+
+        .classic-smart-text::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #2c3e50; /* Same color as the text */
+            left: 50%;
+            bottom: 0;
+            transition: all 0.3s ease-out;
+            transform: translateX(-50%);
+        }
+
+        .classic-smart-text:hover::after {
+            width: 100%;
+        } 
+    </style>
+</head>
+<body class="body_css"> 
+    <!---------------------------------------------------START - navigation bar and banner--------------------------------------------> 
+    <header> 
+        <div class="nav_div">
+            <nav class="navbar navbar-expand-lg nav rounded-pill w-100">
+                <div class="container-fluid mx-md-4 mx-lg-5">
+                    <a class="navbar-brand ms-lg-2" href="index.html">
+                        <img src="images/companylogo/logo.png" alt="" width="100%" height="80px"> 
+                    </a>
+                    <h1 class="home-title">Unity Health Clinic</h1> 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse  navbar-collapse" id="navbarNavDropdown"> 
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link mx-4" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Group
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item " href="ourdoctors.html">Our Doctors</a>
+                                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                                    </div> 
+                                </ul>
+                            </li> 
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item" href="health-screening.html">Health Screening</a>
+                                        <a class="dropdown-item" href="general-practice.html">General Practice</a>
+                                        <a class="dropdown-item" href="women-health.html">Women's Health</a>
+                                        <a class="dropdown-item" href="men-health.html">Men's Health</a>
+                                        <a class="dropdown-item" href="child.html">Child & Adoloescent Health</a>
+                                        <a class="dropdown-item" href="vaccination.html">Vaccination</a>
+                                        <a class="dropdown-item" href="telemedicine.html">Telemedicine</a>
+                                        <a class="dropdown-item" href="covid19.html">COVID-19</a>
+                                        <a class="dropdown-item" href="targeted-medicine.html">Targeted Medical</a>
+                                    </div> 
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="contact.html">Contact</a>
+                            </li>  
+                        </ul> 
+                        <form class="justify-content-end">
+                            <span ><b>24-hour Service</b></span>
+                            <span class="d-block text-danger"><b>(+65-65892500)</b></span>
+                        </form> 
+                    </div> 
+                </div> 
+            </nav>  
+        </div> 
+    </header> 
+    <!---------------------------------------------------END navigation bar and banner------------------------------------------------------>
+     <!--------------------------------------------------------------START Header-------------------------------------------------------->
+  
+    <section class="container my-3" style="background-color: #2c3e50; color: white;">
+        <div class="container ">
+            <div class="text-left mt-2"> 
+                <h2 style="font-family: 'Georgia', serif;font-size: 30px;">Meet Dr Vinu Sahlen</h2> 
+            </div> 
+        </div>
+    </section>    
+    
+    <!--------------------------------------------------------------END Header-------------------------------------------------------->
+    <!--------------------------------------------------------------START deails of doctor-------------------------------------------->    
+    <section style="overflow: hidden;">
+        <div class="container mt-1 margin_left">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border border-1">
+                        <img src="images/doctors/Dr-Vinu-Sahlen.jpg" class="card-img-top " alt="Image 1">
+                        <h5 class="card-title text-center my-2 fw-semibold">Dr Vinu Sahlen</h5>
+                        <div class="container text-center">
+                            <span class="my-2 text-primary">Speaks English, German, Swedish</span><br>
+                            <i class="fas fa-graduation-cap fa-1x"></i> 
+                            <span class="ms-0 fs-6">in: Germany</span>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-4"> 
+                    <nav id="doc_navbar" class="navbar navbar-expand-sms"  style="background-color: #2c3e50; ">
+                        <div class="container-fluid">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">                                    
+                                    <a class="nav-link rounded-pill mx-1" href="#" id="btn1">
+                                        <i class="fas fa-info-circle"></i> About
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded-pill mx-1" href="#" id="btn2">
+                                        <i class="fas fa-user-md"></i> Clinic Interests
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded-pill mx-1" href="#" id="btn3">
+                                        <i class="fas fa-graduation-cap"></i>Education                                        
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                
+                    <div id="container1" class="content-container"> 
+                        <p>Originally from Singapore, Dr. Vinu Sahlén graduated from the University of Aachen, Germany in 1998. She became a Member of the Royal College of Surgeons (UK) before undergoing training as a Family Physician in Sweden. She worked at a primary care clinic in Stockholm for 7 years before moving back to Singapore in 2014. Besides
+                             English she speaks German and Swedish.
+                            <br></p>
+                    </div>
+                    <div id="container2" class="content-container"> 
+                        <p>
+                            •	&nbsp;&nbsp;  Chronic Health and Disease Prevention<br>
+                            •	&nbsp;&nbsp;  Mental Health<br>
+                            •	&nbsp;&nbsp;  Minor Surgical Procedures<br>
+                            •	&nbsp;&nbsp;  Implanon Procedure<br>
+                            •	&nbsp;&nbsp;  Travel Medicine<br>
+                            •	&nbsp;&nbsp;  Respiratory Medicine 
+                        </p>
+                    </div>
+                    <div id="container3" class="content-container">  
+                        <div class="my-2">
+                            <i class="fas fa-globe"></i>
+                            <span class="mx-2 my-5">Germany</span>
+                        </div>    
+                        <div class="my-1">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span class="mx-2">
+                                Zweiter Abschnitt Certificate (Aachen, Germany), MRCS (UK), GDFM (Singapore)
+                            </span>
+                        </div>   
+                    </div>
+                    <div class="my-0">
+                        <a  href="bookappointment.html" class="btn btn-md btn-meetdoc fs-5 mt-0" style="background-color: #2c3e50; color: white;">Make an appointment</a>
+                    </div> 
+                </div>
+            </div>      
+             
+        </div> 
+    </section>
+    <!--------------------------------------------------------------END START deails of doctor----------------------------------------> 
+    <!---------------------------------------------------------------------- start footer --------------------------------------------------->
+    <footer class="container-fluid text-white my-3" style="background-color: #2c3e50;">
+        <div class="container py-5 text-white">
+            <div class="row">
+                <h4 class="fw-bolder">About Unity Health Clinic</h4>
+                <p class="fs-6">By far the largest 24-hour clinic group in Singapore, we started off with 1 clinic in 1999 with the aims to provide a 24-hours medical service. 
+                    Today, our group boasts of 12 fully-equipped clinics nation wide. </p>
+            </div>
+            <hr class="ms-lg-2">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span>GET IN TOUCH</span> <br>   
+                    <hr class="w-25">                     
+                    <span class="opacity-50">WHATSAPP</span><br>
+                    <span>(+65)8856936</span><br> <br>   
+                    <span class="opacity-50">EMAIL</span><br>
+                    <span>enquiries@unityhealthcare.com</span><br> <br>   
+                    <span class="opacity-50">BUSINESS HOURS</span><br>
+                    <span>Open 24 hours, Mon to Sun</span><br>
+                    <p>
+                        <i class="fa-brands fa-square-facebook fa-3x"></i>
+                        <i class="fa-brands fa-square-github fa-3x mx-2"></i>
+                        <i class="fa-brands fa-linkedin fa-3x mx-2"></i>
+                        <i class="fa-brands fa-square-instagram  fa-3x mx-2"></i>
+                    </p> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR GROUP</span> <br>  
+                    <hr class="w-25"> 
+                    <a href="ourdoctors.html" class="d-block text-decoration-none text-secondary footer_a_hover">Our Doctors</a>
+                    <a href="aboutus.html" class="d-block text-decoration-none text-secondary footer_a_hover">About Us</a> 
+                    <br><br>
+                    <span>LOCATE US</span><br>
+                    <hr class="w-25"> 
+                    <span class="opacity-50"> 24-hour clinic</span> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR SERVICES</span> <br> 
+                    <hr class="w-25">     
+                    <a href="general-practice.html" class="d-block text-decoration-none text-secondary footer_a_hover">General Practice</a>
+                    <a href="covid19.html" class="d-block text-decoration-none text-secondary footer_a_hover">Vaccination COVID-19</a> 
+                    <a href="telemedicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Telemedicine</a>
+                    <a href="men-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Men's Health</a>  
+                    <a href="women-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Women's Health</a>
+                    <a href="health-screening.html" class="d-block text-decoration-none text-secondary footer_a_hover">Health Screening With Us</a>
+                    <a href="targeted-medicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Targeted Medicals</a>  
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >CORPORATE</span> <br> 
+                    <hr class="w-25">     
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Central Corporate Wellness</a><br> 
+                    <span>CONTACT US</spanss=><br>  
+                    <hr class="w-25">
+                    <a href="booking.html" class="d-block text-decoration-none text-secondary footer_a_hover">Book an appointment</a>
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Enquiries and Feedback</a> 
+                </div> 
+            </div>
+        </div> 
+    </footer>
+     
+    <script src="plugin/jquery-2.2.0.min.js"></script> <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+    <script src="plugin/slick.js"></script> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> -->
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Fontawesome/js/all.min.js"></script>
+    <script src="splide/js/splide.min.js"></script>
+    
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const containers = document.querySelectorAll('.content-container');
+
+        // Function to hide all containers and remove active class
+        function hideAllContainers() {
+            containers.forEach(container => container.style.display = 'none');
+            navLinks.forEach(link => link.classList.remove('active')); 
+        }
+
+        // Event listeners for buttons
+        document.getElementById('btn1').addEventListener('click', function() {
+            hideAllContainers();
+            document.getElementById('container1').style.display = 'block';
+            
+            document.getElementById('btn1').style.backgroundColor = 'white';
+            document.getElementById('btn1').style.color = '#2c3e50';
+
+            document.getElementById('btn2').style.backgroundColor = '#2c3e50';
+            document.getElementById('btn2').style.color = 'white';
+
+            document.getElementById('btn3').style.backgroundColor = '#2c3e50';
+            document.getElementById('btn3').style.color = 'white';
+
+            this.classList.add('active');
+        });
+
+        document.getElementById('btn2').addEventListener('click', function() {
+            hideAllContainers();
+            document.getElementById('container2').style.display = 'block';
+
+            document.getElementById('btn2').style.backgroundColor = 'white';
+            document.getElementById('btn2').style.color = '#2c3e50';
+
+            document.getElementById('btn1').style.backgroundColor = '#2c3e50';
+            document.getElementById('btn1').style.color = 'white';
+
+            document.getElementById('btn3').style.backgroundColor = '#2c3e50';
+            document.getElementById('btn3').style.color = 'white';
+            this.classList.add('active');
+        });
+
+        document.getElementById('btn3').addEventListener('click', function() {
+            hideAllContainers();
+            document.getElementById('container3').style.display = 'block';
+
+            document.getElementById('btn3').style.backgroundColor = 'white';
+            document.getElementById('btn3').style.color = '#2c3e50';
+            
+            document.getElementById('btn1').style.backgroundColor = '#2c3e50';
+            document.getElementById('btn1').style.color = 'white';
+
+            document.getElementById('btn2').style.backgroundColor = '#2c3e50';
+            document.getElementById('btn2').style.color = 'white';
+        
+            this.classList.add('active');
+        }); 
+
+        // Show the first container by default
+        document.getElementById('btn1').click();
+    </script>
+</body>
+</html>
