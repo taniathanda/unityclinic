@@ -158,19 +158,79 @@
     </style>
 </head>
 <body  class="bookingbody_css">
+    <!---------------------------------------------------START - navigation bar and banner--------------------------------------------> 
+    <header> 
+        <div class="nav_div">
+            <nav class="navbar navbar-expand-lg nav rounded-pill w-100">
+                <div class="container-fluid mx-md-4 mx-lg-5">
+                    <a class="navbar-brand ms-lg-2" href="index.html">
+                        <img src="images/companylogo/logo.png" alt="" width="100%" height="80px"> 
+                    </a>
+                    <h1 class="home-title">UNITY HEALTH CLINIC</h1> 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse  navbar-collapse" id="navbarNavDropdown"> 
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link mx-4" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Group
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item " href="ourdoctors.html">Our Doctors</a>
+                                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                                    </div> 
+                                </ul>
+                            </li> 
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-column">
+                                        <a class="dropdown-item" href="health-screening.html">Health Screening</a>
+                                        <a class="dropdown-item" href="general-practice.html">General Practice</a>
+                                        <a class="dropdown-item" href="women-health.html">Women's Health</a>
+                                        <a class="dropdown-item" href="men-health.html">Men's Health</a>
+                                        <a class="dropdown-item" href="child.html">Child & Adoloescent Health</a>
+                                        <a class="dropdown-item" href="vaccination.html">Vaccination</a>
+                                        <a class="dropdown-item" href="telemedicine.html">Telemedicine</a>
+                                        <a class="dropdown-item" href="covid19.html">COVID-19</a>
+                                        <a class="dropdown-item" href="targeted-medicine.html">Targeted Medical</a>
+                                    </div> 
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="contact.html">Contact</a>
+                            </li>  
+                        </ul> 
+                        <form class="justify-content-end">
+                            <span ><b>24-hour Service</b></span>
+                            <span class="d-block text-danger"><b>(+65-65892500)</b></span>
+                        </form> 
+                    </div> 
+                </div> 
+            </nav>  
+        </div> 
+    </header> 
+    <!---------------------------------------------------END navigation bar and banner------------------------------------------------------>
      <!---------------------------------------------------START - header--------------------------------------------> 
-     <header class="my-3"> 
+     <!-- <header class="my-3"> 
         <div class="bookingheader_div">
             <a class="navbar-brand mx-lg-3" href="index.html">
                 <img src="images/companylogo/logo.png" alt="" width="100%" height="80px"> 
             </a>
             <h1 class="bookinghome-title">Unity Health Clinic</h1>   
         </div> 
-    </header>  
+    </header>   -->
     <!---------------------------------------------------END header------------------------------------------------------>
     <h2 class="bookingheader_div" style="font-family: Georgia, 'Times New Roman', Times, serif;">Welcome to UHC e-Appointment Booking</h2>
     <div class="form-container  my-3"> 
-        <form>
+        <form> 
             <div class="mb-3">
                 <label for="fullName" class="form-label">Full Name</label>
                 <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
@@ -251,6 +311,65 @@
             <a  href="thanksbook.html" type="submit" class="btn btn-md btn-primary mt-3 fs-4">Book Now</a>
         </form>
     </div>
+
+    <footer class="container-fluid text-white my-3" style="background-color: #2c3e50;">
+        <div class="container py-4 text-white">
+            <div class="row">
+                <h4 class="fw-bolder">About Unity Health Clinic</h4>
+                <p class="fs-6">By far the largest 24-hour clinic group in Singapore, we started off with 1 clinic in 1999 with the aims to provide a 24-hours medical service. 
+                    Today, our group boasts of 12 fully-equipped clinics nation wide. </p>
+            </div>
+            <hr class="ms-lg-2">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span>GET IN TOUCH</span> <br>   
+                    <hr class="w-25">                     
+                    <span class="opacity-50">WHATSAPP</span><br>
+                    <span>(+65)8856936</span><br> <br>   
+                    <span class="opacity-50">EMAIL</span><br>
+                    <span>enquiries@unityhealthcare.com</span><br> <br>   
+                    <span class="opacity-50">BUSINESS HOURS</span><br>
+                    <span>Open 24 hours, Mon to Sun</span><br>
+                    <p>
+                        <i class="fa-brands fa-square-facebook fa-3x"></i>
+                        <i class="fa-brands fa-square-github fa-3x mx-2"></i>
+                        <i class="fa-brands fa-linkedin fa-3x mx-2"></i>
+                        <i class="fa-brands fa-square-instagram  fa-3x mx-2"></i>
+                    </p> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR GROUP</span> <br>  
+                    <hr class="w-25"> 
+                    <a href="ourdoctors.html" class="d-block text-decoration-none text-secondary footer_a_hover">Our Doctors</a>
+                    <a href="aboutus.html" class="d-block text-decoration-none text-secondary footer_a_hover">About Us</a> 
+                    <br><br>
+                    <span>LOCATE US</span><br>
+                    <hr class="w-25"> 
+                    <span class="opacity-50"> 24-hour clinic</span> 
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >OUR SERVICES</span> <br> 
+                    <hr class="w-25">     
+                    <a href="general-practice.html" class="d-block text-decoration-none text-secondary footer_a_hover">General Practice</a>
+                    <a href="covid19.html" class="d-block text-decoration-none text-secondary footer_a_hover">Vaccination COVID-19</a> 
+                    <a href="telemedicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Telemedicine</a>
+                    <a href="men-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Men's Health</a>  
+                    <a href="women-health.html" class="d-block text-decoration-none text-secondary footer_a_hover">Women's Health</a>
+                    <a href="health-screening.html" class="d-block text-decoration-none text-secondary footer_a_hover">Health Screening With Us</a>
+                    <a href="targeted-medicine.html" class="d-block text-decoration-none text-secondary footer_a_hover">Targeted Medicals</a>  
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <span >CORPORATE</span> <br> 
+                    <hr class="w-25">     
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Central Corporate Wellness</a><br> 
+                    <span>CONTACT US</spanss=><br>  
+                    <hr class="w-25">
+                    <a href="booking.html" class="d-block text-decoration-none text-secondary footer_a_hover">Book an appointment</a>
+                    <a href="contact.html" class="d-block text-decoration-none text-secondary footer_a_hover">Enquiries and Feedback</a> 
+                </div> 
+            </div>
+        </div> 
+    </footer>
 
     <script src="plugin/server.js"></script>  <!-- Testing For sending email -->
    
@@ -408,6 +527,25 @@
     });
 </script>
 
+<script> 
+  function validateForm() {
+    const name = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('userEmail').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Clear previous error message
+    errorMessage.textContent = '';
+
+    if (!name || !email || !phone) {
+      errorMessage.textContent = 'Please fill out all mandatory fields!';
+    } else {
+      alert('Booking successful!');
+      // Submit form or perform other actions if needed
+      // document.getElementById('bookingForm').submit();
+    }
+  }
+</script>
 
 
 </body>
